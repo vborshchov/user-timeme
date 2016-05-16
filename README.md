@@ -1,13 +1,13 @@
 ## README
 
-Ruby version:
+##### Ruby version:
 ruby 2.3
 
-Rails version:
-rails 5 beta3
+##### Rails version:
+rails 5 rc1
 
-Run the project:
+##### Run the project:
 
-'redis-server' in one tab
+`redis-server` in one tab
 
-'rails s' in another tab
+`rails s` in another tab
