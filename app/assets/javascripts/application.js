@@ -16,8 +16,13 @@
 //= require turbolinks
 //= require_tree .
 
+
 $('document').ready(function() {
+  // dismiss alert messages
   setTimeout(function() {
     $('.alert').slideUp();
   }, 3000);
+
+  // go to last message
+  $('#conversation').scrollTop($('#conversation')[0].scrollHeight)
 });

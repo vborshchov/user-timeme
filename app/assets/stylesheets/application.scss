@@ -59,6 +59,11 @@
   color: #0080FF;
 }
 
+#conversation {
+  overflow: auto;
+  height: 65vh;
+}
+
 body {
   background: image-url('grid-pattern.svg') #040F1A repeat;
   min-height: 100vh;
