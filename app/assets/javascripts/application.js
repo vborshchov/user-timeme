@@ -24,5 +24,7 @@ $('document').ready(function() {
   }, 3000);
 
   // go to last message
-  $('#conversation').scrollTop($('#conversation')[0].scrollHeight)
+  if($('#conversation').size() !== 0) {
+    $('#conversation').scrollTop($('#conversation')[0].scrollHeight);
+  }
 });

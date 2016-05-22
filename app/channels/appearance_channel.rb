@@ -2,17 +2,10 @@
 class AppearanceChannel < ApplicationCable::Channel
   def subscribed
     stream_from "appearance_channel"
+    current_user.online
   end
 
   def unsubscribed
-    current_user.away
-  end
-
-  def appear
-    current_user.appear
-  end
-
-  def away
-    current_user.away
+    current_user.offline
   end
 end

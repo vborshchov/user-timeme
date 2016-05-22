@@ -7,7 +7,7 @@ class SessionsController < Devise::SessionsController
   end
 
   def destroy
-    current_user.away
+    current_user.offline
     cookies.signed[:user_id] = nil
     super
   end
