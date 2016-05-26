@@ -16,7 +16,7 @@ $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
     App.room.speak event.target.value
     event.target.value = ''
 
-$(document).on 'page:change', ->
+$ ->
   $('#send').on 'click', (event) ->
     event.preventDefault()
     App.room.speak $('#message').val()
