@@ -1,4 +1,4 @@
-App.room = App.cable.subscriptions.create "RoomChannel",
+App.general_room = App.cable.subscriptions.create { channel: "RoomChannel", room: "general" },
   connected: ->
 
   disconnected: ->
@@ -10,16 +10,30 @@ App.room = App.cable.subscriptions.create "RoomChannel",
   speak: (message) ->
     @perform('speak', message: message)
 
+
+App.special_room = App.cable.subscriptions.create { channel: "RoomChannel", room: "special" },
+  connected: ->
+
+  disconnected: ->
+
+  received: (data) ->
+    $('#specialMessages').append data['message']
+    see_last_msg()
+
+  speak: (message) ->
+    @perform('speak', message: message)
+
+
 $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
   if event.keyCode is 13 # return = send
     event.preventDefault()
-    App.room.speak event.target.value
+    App.general_room.speak event.target.value
     event.target.value = ''
 
 $ ->
   $('#send').on 'click', (event) ->
     event.preventDefault()
-    App.room.speak $('#message').val()
+    App.general_room.speak $('#message').val()
     $('#message').val('')
 
 # when in the bottom or near the bottom, scroll to the bottom
