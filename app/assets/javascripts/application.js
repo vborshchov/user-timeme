@@ -23,7 +23,7 @@ $('document').ready(function() {
   }, 3000);
 
   // go to last message
-  if($('#conversation').size() !== 0) {
-    $('#conversation').scrollTop($('#conversation')[0].scrollHeight);
+  if($('#general_conversation, #special_conversation').size() !== 0) {
+    $('#general_conversation, #special_conversation').scrollTop($('#general_conversation, #special_conversation')[0].scrollHeight);
   }
 });
