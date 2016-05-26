@@ -4,10 +4,11 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-7">
+  <div class="col-sm-5">
 
-    <div class="panel panel-primary" id="conversation">
-      <div class="panel-body">
+    <div class="panel panel-primary">
+      <div class="panel-heading">General Channel</div>
+      <div class="panel-body conversation" id="general_conversation">
         <div id="messages">
           <%= render @messages %>
         </div>
@@ -18,14 +19,33 @@
       <div class="panel-body">
         <form>
           <label>Say something: </label> <input id="message" type="text" data-behavior="room_speaker" />
-          <button id="send">Send</button>
+          <button class="send" id="send">Send</button>
         </form>
       </div>
     </div>
-
   </div>
 
   <div class="col-sm-5">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Special Channel</div>
+      <div class="panel-body conversation" id="special_conversation">
+        <div id="special_messages">
+          <%= render @special_messages %>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <form>
+          <label>Say something special: </label> <input id="special_message" type="text" data-behavior="room_speaker" />
+          <button class="send" id="special_send">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
     <div class="panel panel-primary">
       <div class="panel-body">
         <h4>Online users:</h4>

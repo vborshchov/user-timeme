@@ -14,6 +14,7 @@ gem 'redis', '~> 3.0'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'dotenv', '~> 2.1', '>= 2.1.1'
+gem 'awesome_print', '~> 1.6', '>= 1.6.1'
 
 group :development, :test do
   gem 'byebug'
