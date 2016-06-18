@@ -4,4 +4,5 @@ class AppearanceBroadcastJob < ApplicationJob
   def perform(list)
     ActionCable.server.broadcast 'appearance_channel', appearances: list
   end
+
 end

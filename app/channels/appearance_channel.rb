@@ -8,4 +8,10 @@ class AppearanceChannel < ApplicationCable::Channel
   def unsubscribed
     current_user.offline
   end
+
+  def say_something(data)
+    puts "USER #{current_user.username} message: #{data['message']}"
+    logger.info "USER #{current_user.username} message: #{data['message']}"
+  end
+
 end

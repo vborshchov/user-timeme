@@ -21,6 +21,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.6'
+  gem 'quiet_assets'
 end
 
 group :test do
